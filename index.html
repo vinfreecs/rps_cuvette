@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="game_name">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+        </div>
+        <div class="computer_score">
+            <p>COMPUTER SCORE</p>
+            <p class="score_number">0</p>
+        </div>
+        <div class="your_score">
+            <p>YOUR <br>SCORE</p>
+            <!-- <p>SCORE</p> -->
+            <p class="score_number">0</p>
+        </div>
+    </section>
+    <section class="options">
+        <div class="rock">
+            <button id="rock" class="option">
+                <img src="rock.png" alt="rock">
+            </button>
+            <!-- <hr class="line" >                     -->
+        </div>
+        <!-- <hr class="rock_hr"> -->
+        <div class="scissors">
+            <button id="scissors" class="option">
+                <img src="scissors.png" alt="scissors">
+            </button>
+            <!-- <hr> -->
+        </div>
+        <!-- <hr class="scissors_hr"> -->
+        <div class="paper">
+            <!-- <hr> -->
+            <button id="paper" class="option">
+                <img src="paper.png" alt="paper">
+            </button>
+        </div>
+        <!-- <hr class="paper_hr"> -->
+    </section>
+    <section class="result" style="display: none;">
+
+    </section>
+    <section class="hurray" style="display: none;">
+        <img src="Vector.png" alt="">
+        <p>HURRAY!! <br> YOU WON THE GAME</p>
+        <button class="play_again">Play Again</button>
+        
+    </section>
+    <section class="rules">
+        <div class="game_rules" style="display: none;">
+            <button class="close_rules">X</button>
+            <div class="rules_text">
+                <h2>Game Rules</h3>
+                    <ul>
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                            paper, scissors.”</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                        <li>If both players lay down the same hand, each player lays down another hand</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="open_buttons">
+            <button class="open_rules">
+                RULES
+            </button>
+            <button class="open_hurray" style="display: none;">
+                NEXT
+            </button>
+        </div>
+        
+    </section>
+    <!-- <section class="triangle">
+        <hr class="rock_hr">
+        <hr class="scissors_hr">
+        <hr class="paper_hr">
+    </section> -->
+</body>
+
+</html>

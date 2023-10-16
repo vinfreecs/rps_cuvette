@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #8CC461;
+}
+.header{
+    width: 75%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    align-items: center;
+    margin-left: 12.5%;
+    margin-top: 5.5%;
+}
+.game_name p{
+    font-family: 'Roboto', sans-serif;
+font-size: 40px;
+font-weight: 600;
+line-height: 47px;
+letter-spacing: 0.1em;
+text-align: left;
+color: white;
+margin-left: 14px;
+}
+.scores{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: inherit;
+}
+.scores div{
+    height: 120px;
+    width: 130px;
+    background-color: white;
+    border-radius: 16px;
+    border: 2px solid red;
+}
+.scores div p{
+    background-color: inherit;
+    font-family: "Roboto";
+font-size: 17px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: center;
+}
+.computer_score{
+    height: 120px;
+    width: 130px;
+    background-color: white;
+    border-radius: 16px;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 10px;
+    color: #656565;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.your_score{
+    height: 120px;
+    width: 130px;
+    background-color: white;
+    border-radius: 16px;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-right: 10px;
+    color: #656565;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.score_number{
+    font-size: 68px;
+}
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    width: 33%;
+    margin-top: 60px;
+    margin-left: 34%
+}
+.rock{
+    display: flex;
+    align-items: center;
+}
+.rock button,
+#rock_selected{
+    background-color: white;
+    height: 110px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid #0074B6;
+    border-radius: 50%;
+}
+.scissors{
+    display: flex;
+    align-items: center;
+    /* transform: rotate(120deg) ; */
+}
+.scissors button,
+#scissors_selected{
+    background-color: white;
+    height: 110px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid #BD00FF;
+    border-radius: 50%;
+}
+.paper{
+    display: flex;
+    align-items: center;
+    /* transform: rotate(60deg) ; */
+    align-self: center;
+}
+.paper button,
+#paper_selected{
+    background-color: white;
+    height: 110px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid #FFA943;
+    border-radius: 50%;
+}
+.rock_hr{
+    position: fixed;
+    left: 45.5%;
+    top: 40%;
+    width: 110px;
+    height: 15px;
+    background-color: #004429;
+}
+.scissors_hr{
+    width: 110px;
+    height: 15px;
+    background-color: #004429;
+    transform: rotate(60deg);
+}
+.paper_hr{
+    width: 110px;
+    height: 15px;
+    background-color: #004429;
+    transform: rotate(120deg);
+}
+.open_buttons{
+    position: fixed;
+bottom: 0;
+right: 0;
+margin-bottom: 20px;
+margin-right: 20px;
+display: flex;
+gap: 10px;
+}
+.open_hurray{
+    width: 119px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background-color: inherit;
+}
+.open_rules{
+    width: 119px;
+height: 40px;
+border-radius: 10px;
+border: 2px solid #FFFFFF;
+color: #FFFFFF;
+font-family: "Roboto";
+font-size: 21px;
+font-weight: 600;
+line-height: 25px;
+letter-spacing: 0.1em;
+text-align: center;
+background-color: inherit;
+}
+.rules_text{
+    width: 240px;
+height: 280px;
+border-radius: 13px;
+border: 7px solid white;
+background-color: #004429;
+padding: 10px;
+padding-left: 20px;
+}
+.rules_text h2{
+    text-align: center;
+    font-family: "Roboto";
+font-size: 29px;
+font-weight: 500;
+line-height: 34px;
+letter-spacing: 0em;
+color: #FFFFFF;
+margin-bottom: 20px;
+}
+li{
+    font-family: "Roboto";
+font-size: 13px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFFFFF;
+list-style-type: square;
+}
+li::marker{
+    color: #FFD600;
+}
+.close_rules{
+    width: 50px;
+height: 50px;
+left: 1217px;
+border: 5px solid white;
+border-radius: 50%;
+background-color: #FF0000;
+font-family: "Dangrek";
+font-size: 36px;
+font-weight: 400;
+text-align: center;
+color: #FFFFFF;
+}
+.play_again{
+    width: 174px;
+height: 44px;
+border: 2px solid #6B6B6B;
+border-radius: 8px;
+font-family: "Roboto";
+font-size: 15px;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0.1em;
+text-align: center;
+
+}
+.result_details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.result_details p{
+    font-family: "Roboto";
+font-size: 39px;
+font-weight: 800;
+line-height: 46px;
+letter-spacing: 0.1em;
+text-align: center;
+
+}
+.player_choice p{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 46px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: white;
+}
+.computer_choice p{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 46px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: white;
+}
+.game_rules{
+    position: fixed;
+    bottom: 80px;
+    right: 12px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.game_rules button{
+    align-self: flex-end;
+}
+.result{
+    display: flex;
+    gap: 30px;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+}
+.hurray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 12%;
+    gap: 50px;
+}
+.hurray p{
+    font-family: "Roboto";
+font-size: 41px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: 0.1em;
+text-align: center;
+
+}
