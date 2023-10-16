@@ -1,6 +1,7 @@
 const options = ["rock", "paper", "scissors"];
-let computerScore = 0;
-let playerScore = 0;
+
+let computerScore =localStorage.getItem("dataComp");
+let playerScore = localStorage.getItem("dataPlayer");
 let playerChoice;
 let computerChoice;
 function computerInput() {
@@ -166,9 +167,11 @@ function ScreenController() {
       switch (res) {
         case "win":
           playerScore++;
+          localStorage.setItem("dataPlayer",playerScore)
           break;
         case "lose":
           computerScore++;
+          localStorage.setItem("dataComp",computerScore)
           break;
         case "tie":
           break;
@@ -185,4 +188,3 @@ function ScreenController() {
 }
 UpdateScore();
 ScreenController();
-console.log(computerScore, playerScore);
