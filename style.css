@@ -282,7 +282,7 @@ text-align: center;
 }
 .player_choice_win{
     position: absolute;
-    top: 360px;
+    top: 380px;
 }
 .player_choice p{
     font-family: "Roboto";
@@ -304,7 +304,7 @@ text-align: center;
 }
 .computer_choice_win{
     position: absolute;
-    top: 360px;
+    top: 380px;
 }
 .game_rules{
     position: fixed;
@@ -344,10 +344,10 @@ text-align: center;
 }
 .triangle svg{
     position: fixed;
-    top: 330px;
+    top: 40.5%;
     width: 400px;
     transform: rotate(180deg);
-    left: 280px;
+    left: 31.5%;
     z-index: -10;
     color: #004429;
 }
