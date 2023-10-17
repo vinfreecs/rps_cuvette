@@ -1,6 +1,6 @@
 const options = ["rock", "paper", "scissors"];
 
-let computerScore =localStorage.getItem("dataComp");
+let computerScore = localStorage.getItem("dataComp");
 let playerScore = localStorage.getItem("dataPlayer");
 let playerChoice;
 let computerChoice;
@@ -76,17 +76,18 @@ function PlayAgain() {
       document.querySelector(".open_hurray").style.display = "none";
       document.querySelector(".header").style.display = "flex";
       document.querySelector(".hurray").style.display = "none";
+      document.querySelector(".triangle").style.display = "block";
     }
   });
 }
-function ManageNext(){
-    document.querySelector(".open_hurray").addEventListener("click",()=>{
-        document.querySelector(".options").style.display = "none";
-        document.querySelector(".header").style.display = "none";
-        document.querySelector(".hurray").style.display = "flex";
-        document.querySelector(".result").style.display = "none";
-        document.querySelector(".open_hurray").style.display = "none";
-    })
+function ManageNext() {
+  document.querySelector(".open_hurray").addEventListener("click", () => {
+    document.querySelector(".options").style.display = "none";
+    document.querySelector(".header").style.display = "none";
+    document.querySelector(".hurray").style.display = "flex";
+    document.querySelector(".result").style.display = "none";
+    document.querySelector(".open_hurray").style.display = "none";
+  });
 }
 function UpdateResult(res) {
   const result = document.querySelector(".result");
@@ -95,12 +96,19 @@ function UpdateResult(res) {
     case "win":
       document.querySelector(".open_hurray").style.display = "block";
       result.innerHTML = `
-        <div class="player_choice">
-            <p>You've Picked</p>
-            <button  id="${playerChoice}_selected" class="">
-                <img src="${playerChoice}.png" alt="${playerChoice}">
-            </button>
-        </div>
+      <div class="circle_1">
+        <div class="circle_2">
+            <div class="circle_3">
+              <div class="player_choice player_choice_win">
+                <p>You've Picked</p>
+                <button  id="${playerChoice}_selected" class="">
+                  <img src="${playerChoice}.png" alt="${playerChoice}">
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+        
         <div class="result_details">
             <p>YOU ${res} <br> AGAINST PC</p>
             <button class="play_again">Play Again</button>
@@ -112,9 +120,9 @@ function UpdateResult(res) {
             </button>
         </div>
         `;
-        break;
+      break;
     case "lose":
-        result.innerHTML = `
+      result.innerHTML = `
         <div class="player_choice">
             <p>You've Picked</p>
             <button  id="${playerChoice}_selected" class="">
@@ -125,16 +133,22 @@ function UpdateResult(res) {
             <p>YOU ${res} <br> AGAINST PC</p>
             <button class="play_again">Play Again</button>
         </div>
-        <div class="computer_choice">
-            <p>Computer Picked</p>
-            <button  id="${computerChoice}_selected" class="">
+        <div class="circle_1">
+        <div class="circle_2">
+            <div class="circle_3">
+              <div class="computer_choice computer_choice_win">
+                <p>PC Picked</p>
+                <button  id="${computerChoice}_selected" class="">
                 <img src="${computerChoice}.png" alt="${computerChoice}">
             </button>
-        </div>
-        `
-        break;
+              </div>
+            </div>
+          </div>
+      </div>
+        `;
+      break;
     case "tie":
-        result.innerHTML = `
+      result.innerHTML = `
         <div class="player_choice">
             <p>You've Picked</p>
             <button  id="${playerChoice}_selected" class="">
@@ -151,8 +165,7 @@ function UpdateResult(res) {
                 <img src="${computerChoice}.png" alt="${computerChoice}">
             </button>
         </div>
-    `
-
+    `;
   }
 }
 function ScreenController() {
@@ -161,17 +174,18 @@ function ScreenController() {
   playerInput.forEach((item) => {
     item.addEventListener("click", () => {
       document.querySelector(".options").style.display = "none";
+      document.querySelector(".triangle").style.display = "none";
       playerChoice = item.id;
       computerChoice = computerInput();
       let res = playRound(playerChoice, computerChoice);
       switch (res) {
         case "win":
           playerScore++;
-          localStorage.setItem("dataPlayer",playerScore)
+          localStorage.setItem("dataPlayer", playerScore);
           break;
         case "lose":
           computerScore++;
-          localStorage.setItem("dataComp",computerScore)
+          localStorage.setItem("dataComp", computerScore);
           break;
         case "tie":
           break;

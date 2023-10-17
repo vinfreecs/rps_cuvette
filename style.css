@@ -210,6 +210,9 @@ border: 7px solid white;
 background-color: #004429;
 padding: 10px;
 padding-left: 20px;
+position: absolute;
+top: 35px;
+right: 36px;
 }
 .rules_text h2{
     text-align: center;
@@ -246,6 +249,7 @@ font-size: 36px;
 font-weight: 400;
 text-align: center;
 color: #FFFFFF;
+
 }
 .play_again{
     width: 174px;
@@ -276,6 +280,10 @@ letter-spacing: 0.1em;
 text-align: center;
 
 }
+.player_choice_win{
+    position: absolute;
+    top: 360px;
+}
 .player_choice p{
     font-family: "Roboto";
     font-size: 12px;
@@ -293,6 +301,10 @@ text-align: center;
     letter-spacing: 0.1em;
     text-align: center;
     color: white;
+}
+.computer_choice_win{
+    position: absolute;
+    top: 360px;
 }
 .game_rules{
     position: fixed;
@@ -329,4 +341,43 @@ line-height: 48px;
 letter-spacing: 0.1em;
 text-align: center;
 
+}
+.triangle svg{
+    position: fixed;
+    top: 330px;
+    width: 400px;
+    transform: rotate(180deg);
+    left: 280px;
+    z-index: -10;
+    color: #004429;
+}
+.circle_3{
+    width: 150px;
+height: 150px;
+background-color: #3b6720b5;
+z-index: 3;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.circle_2{
+    width: 210px;
+height: 210px;
+background-color: #1da82b86;
+z-index: 5;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.circle_1{
+    width: 270px;
+height: 270px;
+background-color: #2E9A2563;
+z-index: 8;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
